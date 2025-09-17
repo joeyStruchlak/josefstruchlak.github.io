@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Josef Struchlak - Portfolio</title>
+   <span class="gradient-text">Tech Delivery Lead</span><br>&amp; Full Stack Developer
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Josef Struchlak</a>
+                <span class="logo-text">Josef Struchlak</span>
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
                 <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
@@ -33,14 +36,49 @@
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
-                <h1 class="hero-title">Josef Struchlak</h1>
-                <h2 class="hero-subtitle">Client Engagement & Hybrid Tech Delivery Lead</h2>
-                <p class="hero-description">
-                    Bridging technical and non-technical spaces to deliver innovative solutions
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#experience" class="btn btn-secondary">View Experience</a>
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="gradient-text">Tech Delivery Lead</span>
+                        <br>& Full Stack Developer
+                    </h1>
+                    <p class="hero-description">
+                        I bridge technology and business, delivering solutions that drive real impact.
+                        From election systems to legacy modernization, I lead teams to build the right solutions.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-card">
+                        <div class="card-header">
+                            <div class="card-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="code-line">
+                                <span class="code-keyword">const</span>
+                                <span class="code-variable">josef</span> = {
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">role</span>:
+                                <span class="code-string">"Tech Delivery Lead"</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">location</span>:
+                                <span class="code-string">"Adelaide, AU"</span>,
+                            </div>
+                            <div class="code-line indent">
+                                <span class="code-property">passion</span>:
+                                <span class="code-string">"Building Impact"</span>
+                            </div>
+                            <div class="code-line">};</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,94 +87,186 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Bridging technology and business impact</p>
+            </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        I work across technology, delivery, and client coordination, helping teams build the right solutions. 
-                        Starting in software, I've progressed into hybrid roles blending hands-on development, project delivery, 
+                    <p class="about-description">
+                        I work across technology, delivery, and client coordination, helping teams build the right
+                        solutions.
+                        Starting in software, I've progressed into hybrid roles blending hands-on development, project
+                        delivery,
                         and active stakeholder engagement.
                     </p>
-                    <p>
-                        With experience outside IT, I bring a fresh perspective, confident leadership, and clear communication, 
+                    <p class="about-description">
+                        With experience outside IT, I bring a fresh perspective, confident leadership, and clear
+                        communication,
                         bridging technical and non-technical spaces to keep delivery on track.
                     </p>
-                </div>
-                <div class="about-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Adelaide, Australia</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>0458 486 576</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>jstruchlak@gmail.com</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">July 2025 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Full Stack Developer</h3>
-                        <h4>Pernix</h4>
-                        <p>Development for the ECSA Local First Nations Election and State By-Election projects.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5</span>
+                            <span class="stat-label">Industries</span>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Dec 2022 - Present</div>
-                    <div class="timeline-content">
-                        <h3>Senior Client Tech Lead</h3>
-                        <h4>Pernix</h4>
-                        <p>Delivered nationwide system rollout; owned proposals, Agile delivery, and estimation for modernising core legacy apps.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">Jan 2022 - Dec 2022</div>
-                    <div class="timeline-content">
-                        <h3>WordPress / Wix Designer</h3>
-                        <h4>LashMama Academy</h4>
-                        <p>Delivered end-to-end website solutions using WordPress, Wix, and Shopify, including e-commerce, LMS (LearnDash), and booking system integration.</p>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-user-tie"></i>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Key Achievements Section -->
-    <section id="achievements" class="achievements">
+    <!-- Featured Projects Section -->
+    <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Key Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <i class="fas fa-rocket"></i>
-                    <h3>ECSA Election Systems Delivery</h3>
-                    <p>Led development for Local First Nations Election and State By-Election projects</p>
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Solutions that drive real business impact</p>
+            </div>
+            <div class="projects-grid">
+                <!-- ECSA Election Systems -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="public\sav.png" alt="ECSA Election Systems">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">ASP.NET</span>
+                                <span class="tech-tag">Angular</span>
+                                <span class="tech-tag">SQL Server</span>
+                                <span class="tech-tag">Azure</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">ECSA Election Systems</h3>
+                        <p class="project-description">
+                            Developed secure voting systems for Local First Nations and State By-Election projects.
+                            Built backend APIs, frontend forms, and automated deployment pipelines enabling efficient
+                            and modern election processes in South Australia.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-shield-alt"></i>
+                                <span>High Security & Reliability</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-users"></i>
+                                <span>Statewide Implementation</span>
+                            </div>
+                            <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit SpendAnalytix
+                        </a>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-cogs"></i>
-                    <h3>Legacy Modernisation for CMV Group</h3>
-                    <p>Modernised legacy systems to modern Microsoft-based architecture</p>
+
+                <!-- CMV Group Legacy Modernisation -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public\cmvvv.png" alt="CMV Group Modernisation">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">.NET</span>
+                                <span class="tech-tag">Azure</span>
+                                <span class="tech-tag">Agile</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CMV Group Legacy Modernisation</h3>
+                        <p class="project-description">
+                            Led modernization of legacy systems to Microsoft-based architecture. Coordinated
+                            cross-functional
+                            teams using Agile methodologies and developed real-time project tracking dashboards.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>30% Delivery Speed Increase</span>
+                            </div>
+                            <div class="impact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Reduced System Downtime</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Fast-Tracked Career Growth</h3>
-                    <p>Transitioned from hospitality to IT, progressing from intern to technical lead</p>
+
+                <!-- SpendAnalytix -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="public\spana.jpg" alt="SpendAnalytix Platform">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">SaaS</span>
+                                <span class="tech-tag">UX Design</span>
+                                <span class="tech-tag">Client Engagement</span>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">SpendAnalytix SaaS Platform</h3>
+                        <p class="project-description">
+                            Contributed to UX design and architecture, supporting client pitch decks and demo flows.
+                            Enhanced product demos to effectively communicate value to potential clients.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-handshake"></i>
+                                <span>First 3 Client Contracts Secured</span>
+                            </div>
+                        </div>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit SpendAnalytix
+                        </a>
+                    </div>
                 </div>
-                <div class="achievement-card">
-                    <i class="fas fa-users"></i>
-                    <h3>Cross-Team Agile Delivery</h3>
-                    <p>Managed cross-functional teams and facilitated collaborative sessions</p>
+
+                <!-- LashMama Academy -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="/placeholder.svg?height=250&width=400" alt="LashMama Academy">
+                        <div class="project-overlay">
+                            <div class="project-tech">
+                                <span class="tech-tag">Shopify</span>
+                                <span class="tech-tag">WordPress</span>
+                                <span class="tech-tag">LMS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">LashMama Academy</h3>
+                        <p class="project-description">
+                            Delivered complete eCommerce and learning management platform, integrating Shopify with
+                            LMS for seamless online booking and training experiences.
+                        </p>
+                        <div class="project-impact">
+                            <div class="impact-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>Complete Learning Platform</span>
+                            </div>
+                        </div>
+                        <a href="#" class="project-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            Visit LashMama
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -144,107 +274,150 @@
 
     <!-- Skills Section -->
     <section id="skills" class="skills">
-        <div class="container">
+    <div class="container">
+        <div class="section-header">
             <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
+            <p class="section-subtitle">Technologies and methodologies I work with</p>
+        </div>
+
+        <div class="skills-grid">
+
+            <!-- Development -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-code"></i>
                     <h3>Development</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">C#</span>
-                        <span class="skill-tag">JavaScript</span>
-                        <span class="skill-tag">HTML</span>
-                        <span class="skill-tag">React</span>
-                        <span class="skill-tag">SQL</span>
-                        <span class="skill-tag">MongoDB</span>
-                    </div>
                 </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Microsoft Azure</span>
-                        <span class="skill-tag">DevOps</span>
-                        <span class="skill-tag">CI/CD</span>
-                        <span class="skill-tag">Cloud</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Project Management</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Agile Development</span>
-                        <span class="skill-tag">Scrum</span>
-                        <span class="skill-tag">JIRA</span>
-                        <span class="skill-tag">SDLC</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Stakeholder Engagement</span>
-                        <span class="skill-tag">Technical Translation</span>
-                        <span class="skill-tag">UI/UX</span>
-                    </div>
+                <div class="skills-list">
+                    <span class="skill-tag">C# / .NET</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">SQL</span>
                 </div>
             </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-cloud"></i>
+                    <h3>Cloud & DevOps</h3>
+                </div>
+                <div class="skills-list">
+                    <span class="skill-tag">Microsoft Azure</span>
+                    <span class="skill-tag">Azure DevOps</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">DevOps</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">GitHub</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+            </div>
+
+            <!-- Leadership & Process -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-users"></i>
+                    <h3>Leadership & Process</h3>
+                </div>
+                <div class="skills-list">
+                    <span class="skill-tag">Agile / Scrum</span>
+                    <span class="skill-tag">Stakeholder Engagement</span>
+                    <span class="skill-tag">JIRA</span>
+                    <span class="skill-tag">Cross-Team Communication</span>
+                    <span class="skill-tag">Confluence</span>
+                    
+                </div>
+            </div>
+
+            <!-- Design & UX -->
+            <div class="skill-category">
+                <div class="category-header">
+                    <i class="fas fa-palette"></i>
+                    <h3>Design & UX</h3>
+                </div>
+                <div class="skills-list">
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">WordPress</span>
+                    <span class="skill-tag">Shopify</span>
+                    <span class="skill-tag">Wix</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Miro</span>
+                    <span class="skill-tag">Responsive Design</span>
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">Let's Work Together</h2>
+            <p class="section-subtitle">Ready to bring your next project to life</p>
+        </div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">
                         <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>jstruchlak@gmail.com</p>
-                        </div>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>0458 486 576</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>Adelaide, Australia</p>
-                        </div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:jstruchlak@gmail.com">jstruchlak@gmail.com</a>
                     </div>
                 </div>
-                <div class="references">
-                    <h3>References</h3>
-                    <div class="reference-item">
-                        <h4>JC (Johannes Cornelis) De Klerk</h4>
-                        <p>Custom Development Tech Lead | Solution Architect at PERNIX</p>
-                        <p>Phone: 0450 141 831 | Email: janniedk@gmail.com</p>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
                     </div>
-                    <div class="reference-item">
-                        <h4>Christian Voudantas</h4>
-                        <p>Business Owner @ Alto Apto | AI & Web3 Specialist</p>
-                        <p>Phone: 0432 071 388 | Email: christian@altoapto.com.au</p>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:0458486576">0458 486 576</a>
                     </div>
-                    <div class="reference-item">
-                        <h4>Purni Ranasinha</h4>
-                        <p>CEO & Founder @ Lash Mama Australia</p>
-                        <p>Phone: 0432 256 200 | Email: lashmamatm@gmail.com</p>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Location</h4>
+                        <span>Adelaide, Australia</span>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <a href="#" target="_blank">Connect with me</a>
                     </div>
                 </div>
             </div>
+            <div class="contact-message">
+                <h3>Open to meaningful opportunities</h3>
+                <p>I’m currently looking to collaborate on impactful projects — especially in tech leadership, full stack development, or digital transformation.</p>
+                <a href="mailto:jstruchlak@gmail.com" class="btn btn-primary">Start a Conversation</a>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Josef Struchlak. All rights reserved.</p>
+
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

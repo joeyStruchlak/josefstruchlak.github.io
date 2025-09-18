@@ -1,168 +1,170 @@
 // Mobile Navigation Toggle
-const navToggle = document.getElementById("nav-toggle")
-const navMenu = document.getElementById("nav-menu")
+const navToggle = document.getElementById("nav-toggle");
+const navMenu = document.getElementById("nav-menu");
 
 navToggle.addEventListener("click", () => {
-  navMenu.classList.toggle("active")
-  navToggle.classList.toggle("active")
-})
+  navMenu.classList.toggle("active");
+  navToggle.classList.toggle("active");
+});
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll(".nav-link").forEach((link) => {
   link.addEventListener("click", () => {
-    navMenu.classList.remove("active")
-    navToggle.classList.remove("active")
-  })
-})
+    navMenu.classList.remove("active");
+    navToggle.classList.remove("active");
+  });
+});
 
-const typingText = document.getElementById("typing-text")
+const typingText = document.getElementById("typing-text");
 const phrases = [
   "Client Tech Lead",
   "Agile-Inspired Delivery",
   "Adaptive Full Stack Developmer Knowledge",
   "Cross Team Collaboration",
   "Stakeholder Engagement Pro",
-]
+];
 
-let currentPhraseIndex = 0
-let currentCharIndex = 0
-let isDeleting = false
-let typingSpeed = 100
+let currentPhraseIndex = 0;
+let currentCharIndex = 0;
+let isDeleting = false;
+let typingSpeed = 100;
 
 function typeEffect() {
-  const currentPhrase = phrases[currentPhraseIndex]
+  const currentPhrase = phrases[currentPhraseIndex];
 
   if (isDeleting) {
     // Deleting characters with backspace effect
-    typingText.textContent = currentPhrase.substring(0, currentCharIndex - 1)
-    currentCharIndex--
-    typingSpeed = 50 // Faster deletion
+    typingText.textContent = currentPhrase.substring(0, currentCharIndex - 1);
+    currentCharIndex--;
+    typingSpeed = 50; // Faster deletion
 
     if (currentCharIndex === 0) {
-      isDeleting = false
-      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length
-      typingSpeed = 500 // Pause before typing next phrase
+      isDeleting = false;
+      currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+      typingSpeed = 500; // Pause before typing next phrase
     }
   } else {
     // Typing characters
-    typingText.textContent = currentPhrase.substring(0, currentCharIndex + 1)
-    currentCharIndex++
-    typingSpeed = 100 // Normal typing speed
+    typingText.textContent = currentPhrase.substring(0, currentCharIndex + 1);
+    currentCharIndex++;
+    typingSpeed = 100; // Normal typing speed
 
     if (currentCharIndex === currentPhrase.length) {
-      isDeleting = true
-      typingSpeed = 2000 // Pause before deleting
+      isDeleting = true;
+      typingSpeed = 2000; // Pause before deleting
     }
   }
 
-  setTimeout(typeEffect, typingSpeed)
+  setTimeout(typeEffect, typingSpeed);
 }
 
 // Start typing animation when page loads
 document.addEventListener("DOMContentLoaded", () => {
-  setTimeout(typeEffect, 1000) // Start after 1 second
-})
+  setTimeout(typeEffect, 1000); // Start after 1 second
+});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
-    e.preventDefault()
-    const target = document.querySelector(this.getAttribute("href"))
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute("href"));
     if (target) {
       target.scrollIntoView({
         behavior: "smooth",
         block: "start",
-      })
+      });
     }
-  })
-})
+  });
+});
 
 // Navbar background change on scroll
 window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar")
+  const navbar = document.querySelector(".navbar");
   if (window.scrollY > 50) {
-    navbar.style.background = "rgba(255, 255, 255, 0.98)"
-    navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)"
+    navbar.style.background = "rgba(255, 255, 255, 0.98)";
+    navbar.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)";
   } else {
-    navbar.style.background = "rgba(255, 255, 255, 0.95)"
-    navbar.style.boxShadow = "none"
+    navbar.style.background = "rgba(255, 255, 255, 0.95)";
+    navbar.style.boxShadow = "none";
   }
-})
+});
 
 // Intersection Observer for animations
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
-}
+};
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
-      entry.target.style.opacity = "1"
-      entry.target.style.transform = "translateY(0)"
+      entry.target.style.opacity = "1";
+      entry.target.style.transform = "translateY(0)";
     }
-  })
-}, observerOptions)
+  });
+}, observerOptions);
 
 // Observe elements for animation
 document.addEventListener("DOMContentLoaded", () => {
-  const animateElements = document.querySelectorAll(".skill-category, .contact-item, .project-card")
+  const animateElements = document.querySelectorAll(
+    ".skill-category, .contact-item, .project-card"
+  );
 
   animateElements.forEach((el) => {
-    el.style.opacity = "0"
-    el.style.transform = "translateY(30px)"
-    el.style.transition = "opacity 0.6s ease, transform 0.6s ease"
-    observer.observe(el)
-  })
-})
+    el.style.opacity = "0";
+    el.style.transform = "translateY(30px)";
+    el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
+    observer.observe(el);
+  });
+});
 
 // Add active class to navigation links based on scroll position
 window.addEventListener("scroll", () => {
-  const sections = document.querySelectorAll("section[id]")
-  const navLinks = document.querySelectorAll(".nav-link")
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
-  let current = ""
+  let current = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop
-    const sectionHeight = section.clientHeight
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
 
     if (window.scrollY >= sectionTop - 200) {
-      current = section.getAttribute("id")
+      current = section.getAttribute("id");
     }
-  })
+  });
 
   navLinks.forEach((link) => {
-    link.classList.remove("active")
+    link.classList.remove("active");
     if (link.getAttribute("href") === `#${current}`) {
-      link.classList.add("active")
+      link.classList.add("active");
     }
-  })
-})
+  });
+});
 
 document.querySelectorAll(".btn-primary, .btn-secondary").forEach((button) => {
   button.addEventListener("click", function (e) {
-    const ripple = document.createElement("span")
-    const rect = this.getBoundingClientRect()
-    const size = Math.max(rect.width, rect.height)
-    const x = e.clientX - rect.left - size / 2
-    const y = e.clientY - rect.top - size / 2
+    const ripple = document.createElement("span");
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+    const x = e.clientX - rect.left - size / 2;
+    const y = e.clientY - rect.top - size / 2;
 
-    ripple.style.width = ripple.style.height = size + "px"
-    ripple.style.left = x + "px"
-    ripple.style.top = y + "px"
-    ripple.classList.add("ripple")
+    ripple.style.width = ripple.style.height = size + "px";
+    ripple.style.left = x + "px";
+    ripple.style.top = y + "px";
+    ripple.classList.add("ripple");
 
-    this.appendChild(ripple)
+    this.appendChild(ripple);
 
     setTimeout(() => {
-      ripple.remove()
-    }, 600)
-  })
-})
+      ripple.remove();
+    }, 600);
+  });
+});
 
 // Add CSS for enhanced effects
-const style = document.createElement("style")
+const style = document.createElement("style");
 style.textContent = `
     .nav-link.active {
         color: #1f2937 !important;
@@ -238,18 +240,6 @@ style.textContent = `
         border: 2px solid transparent;
     }
 
-    .btn-primary {
-  background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-  color: white;
-  border: none;
-}
-
-.btn-primary:hover {
-  background: linear-gradient(90deg, #1e40af, #2563eb);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
-}
-
 .btn-secondary {
   background: transparent;
   color: #3b82f6;
@@ -263,16 +253,16 @@ style.textContent = `
 }
 
 
-`
-document.head.appendChild(style)
+`;
+document.head.appendChild(style);
 
 // Initialize all functionality
 document.addEventListener("DOMContentLoaded", () => {
   // Add loading animation
-  document.body.style.opacity = "0"
-  document.body.style.transition = "opacity 0.5s ease"
+  document.body.style.opacity = "0";
+  document.body.style.transition = "opacity 0.5s ease";
 
   setTimeout(() => {
-    document.body.style.opacity = "1"
-  }, 100)
-})
+    document.body.style.opacity = "1";
+  }, 100);
+});

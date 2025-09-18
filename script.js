@@ -19,7 +19,7 @@ const typingText = document.getElementById("typing-text");
 const phrases = [
   "Client Tech Lead",
   "Agile-Inspired Delivery",
-  "Adaptive Full Stack Developmer Knowledge",
+  "Adaptive Full Stack Developer Knowledge",
   "Cross Team Collaboration",
   "Stakeholder Engagement Pro",
 ];

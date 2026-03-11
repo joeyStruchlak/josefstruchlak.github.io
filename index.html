@@ -782,7 +782,7 @@
             color: #ffffff;
             display: block;
             line-height: 0.9;
-            margin-bottom: -20px;
+            margin-bottom: 8px;
             -webkit-text-stroke: 0;
             text-shadow: none;
             -webkit-text-stroke: 4px #ffffff;
@@ -798,7 +798,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            overflow: visible;
             margin-bottom: 4px;
         }
 
@@ -1169,13 +1169,13 @@
         }
 
         .stage-bracket.tl {
-            top: 0;
+            top: 22px;
             left: clamp(0px, 5%, 60px);
             border-width: 2px 0 0 2px;
         }
 
         .stage-bracket.tr {
-            top: 0;
+            top: 12px;
             right: clamp(0px, 5%, 60px);
             border-width: 2px 2px 0 0;
         }
@@ -3339,9 +3339,10 @@
                 <div class="scan-line"></div>
                 <div class="orbit-dot"></div>
                 <div class="orbit-dot od2"></div>
-                <span class="rw">Developer</span>
-                <span class="rw">Designer</span>
+                <!-- <span class="rw">Developer</span> -->
                 <span class="rw" data-text="ENGINEER">Engineer</span>
+                <span class="rw">Designer</span>
+
             </div>
             <div class="hero-bottom">
                 <p class="hero-tagline">I build apps, websites &amp; digital products---<br>from idea to live in the
@@ -4430,7 +4431,7 @@
 
         function startWords() {
             const words = document.querySelectorAll('.rw');
-            const engSpan = words[2];
+            const engSpan = words[0];
             const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&*<>?/\\|~^';
             const WORD = 'ENGINEER';
             let currentIndex = 0;
